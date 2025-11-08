@@ -1,0 +1,119 @@
+/*Aspectos gerais*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #99c6bc;
+  display: flex;
+  /*justify-content: center;
+  align-items: center;*/
+  min-height: 100vh;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 1rem;
+  width: 100%;
+}
+
+/*Fim dos aspectos gerais*/
+
+
+
+
+
+/*Cabeçalho*/
+
+.header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #cbc1b1;
+  height: 4rem;
+  border-bottom: solid 4px #4f615e;
+}
+
+.box_logo img {
+  height: 3rem;
+  padding-inline: 2rem;
+  margin-top: 0.3rem;
+}
+
+.header button {
+  margin: 0;
+  background-color: #cbc1b1;
+  border: none;
+  border-radius: 5px;
+  padding: 0rem;
+  font-size: 1.2rem;
+  font-weight: 800;
+  font-family: "Nunito", sans-serif;
+  color: #534f48;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  padding-inline: 2rem;
+  height: 3rem;
+}
+
+.header button:hover {
+  background-color: #b9b0a1;
+  transform: translateY(-1px);
+}
+
+/*Seleção atual da página(cabeçalho)*/
+.box_jogo {
+  background-color: #b9b0a1 !important;
+}
+
+/*Fim do cabeçalho*/
+
+
+
+
+
+/*Main*/
+
+.main{
+  display: grid;
+  justify-content: center;
+}
+
+.jogo input{
+  width: 6rem;
+  height: 6rem;
+  border-radius: 0.6rem;
+  margin: 0.2rem 0.1rem;
+  background-color: #84a59e;
+  border: 0.5rem solid transparent;
+  text-align: center;
+  font-family: "Fredoka", sans-serif;
+  font-size: 4rem;
+  font-weight: 630;
+  color: #4f615e;
+  caret-color: transparent;
+}
+
+.jogo input:focus{
+  outline: none;
+  border-color: #4f615e;
+  border-radius: 13px;
+}
+
+
+
+
+
+
+
+
+
+
+/*Fim do main*/
+

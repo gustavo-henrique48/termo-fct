@@ -1,0 +1,91 @@
+/* Aspectos gerais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #99c6bc;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Nunito", sans-serif;
+}
+
+/* Container principal: header + conteúdo */
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  background-color: #cbc1b1;
+  border-bottom: 4px solid #4f615e;
+  height: 4rem;
+  padding: 0 1rem;
+}
+
+.box_logo img {
+  height: 3rem;
+  margin-right: 1rem;
+}
+
+.header button {
+  background-color: transparent;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #534f48;
+  margin-left: 2rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.header button:hover {
+  background-color: #b9b0a1;
+  border-radius: 5px;
+}
+
+/* Conteúdo principal */
+.conteudo {
+  flex: 1;
+  background-color: #99c6bc;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+}
+
+/* Área de cadastro */
+.cadastro {
+  background-color: #84a59e;
+  color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 900px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-size: 3vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2vh;
+}
+
+#titulo{
+
+  font-size: 4vh;
+  text-align: left;
+
+}
+
+#Esquerda, #Direita{
+
+  text-align: left;
+
+}

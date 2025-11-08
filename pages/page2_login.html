@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/page2.css" />
+    <title>Logar</title>
+
+    <!-- Fonte Nunito -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="box_logo">
+            <img src="../images/logo.png" alt="Logo" />
+        </div>
+
+        <div class="formulario">
+            <label for="email">Email:</label>
+            <input type="text" id="email" placeholder="Insira seu email" required>
+        </div>
+        <div class="formulario">
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" placeholder="Insira sua senha" required>
+        </div>
+
+        <div class="botoes">
+            <button onclick="voltar()" class="voltar">
+                <span class="material-symbols-outlined">
+                    undo
+                </span> 
+            Voltar</button> 
+            
+            &nbsp; &nbsp;
+
+            <button onclick="logar()" class="logar">
+                <span class="material-symbols-outlined">
+                    login
+                </span>
+            Logar</button>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
