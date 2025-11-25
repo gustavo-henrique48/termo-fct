@@ -7,10 +7,15 @@
 body {
   background-color: #99c6bc;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .container {
   width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 /*Cabeçalho*/
@@ -51,218 +56,237 @@ body {
 }
 
 .header button:hover {
-  /*background-color: #b9b0a1;*/
   color: rgba(255, 255, 255, 0.575);
   transform: scale(1.1);
 }
 
-/*Seleção atual da página(cabeçalho)*/
-.box_jogo {
-  color: rgba(255, 255, 255, 0.575) !important;
+/* Conteúdo Principal */
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  width: 100%;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*Jogo*/
-.main {
-  display: grid;
+/* Área do Jogo */
+.jogo-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  margin-top: 1rem;
+  flex: 1;
+  width: 100%;
+}
+
+.jogo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.palavra1,
+.palavra2,
+.palavra3,
+.palavra4,
+.palavra5,
+.palavra6 {
+  display: flex;
+  gap: 5px;
 }
 
 .jogo input {
-  width: 6rem;
-  height: 6rem;
-  border-radius: 0.6rem;
-  margin: 0.2rem;
-  background-color: #84a59e;
-  border: 0.5rem solid transparent;
+  width: 62px;
+  height: 62px;
+  border: 4px solid #3a3a3c;
+  background: none;
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
   text-align: center;
-  font-family: "Fredoka", sans-serif;
-  font-size: 4rem;
-  font-weight: 630;
-  color: #4f615e;
-  caret-color: transparent;
+  text-transform: uppercase;
+  border-radius: 10px;
+  transition: all 0.3s;
 }
 
 .jogo input:focus {
   outline: none;
-  border-color: #4f615e;
-  border-radius: 13px;
-  border-width: 0.6rem;
+  border-color: #565758;
 }
 
-.jogo input {
-  cursor: pointer;
+/* Cores das letras */
+.jogo input.verde {
+  background-color: #6aaa64;
+  border-color: #6aaa64;
+  color: white;
 }
 
-.jogo div {
+.jogo input.amarelo {
+  background-color: #c9b458;
+  border-color: #c9b458;
+  color: white;
+}
+
+.jogo input.cinza {
+  background-color: #787c7e;
+  border-color: #787c7e;
+  color: white;
+}
+
+/* Teclado */
+.teclado-container {
   display: flex;
   justify-content: center;
+  width: 100%;
+  padding: 20px 0;
 }
 
-
-
-
-
-
-
-
-
-
-
-/*Animação de zoom rápido ao digitar uma letra*/
-@keyframes zoomRapido {
-  0% {
-    transform: scale(1);
-  }
-
-  35% {
-    transform: scale(1.10);
-  }
-
-  100% {
-    transform: scale(1);
-  }
-}
-
-.zoomar {
-  animation: zoomRapido 120ms ease-out;
-}
-
-
-.linha-ativa input {
-  background-color: #99c6bc;
-  outline: none;
-  border-color: #4f615e;
-  border-radius: 13px;
-  border-width: 0.35rem;
-}
-
-.linha-bloqueada input {
-  pointer-events: none;
-  /* deixa impossível clicar */
-}
-
-
-
-
-
-
-
-
-
-/*Teclado virtual*/
 .teclado {
+  display: flex;
+  flex-direction: column;
   background-color: #84a59e;
-  width: 40rem;
-  margin-top: 1rem;
-  border-radius: 13px;
-  padding: 1rem;
-  display: grid;
-  gap: 0.2rem;
+  width: auto;
+  max-width: 50rem;
+  /* Aumentado de 40rem para 50rem */
+  padding: 1.5rem;
+  /* Aumentado o padding */
+  gap: 10px;
+  /* Aumentado o gap */
+  align-items: center;
+  border-radius: 14px;
+}
+
+.q_p,
+.a_backspace,
+.z_enter {
+  display: flex;
+  gap: 8px;
+  /* Aumentado o gap entre as teclas */
 }
 
 .tecla {
-  background-color: #534f48;
-  border: none;
-  border-radius: 5px;
-  margin: 0.1rem;
-  font-size: 2rem;
-  font-weight: 900;
-  font-family: "Fredoka", sans-serif;
+  background-color: #818384;
   color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 16px 18px;
+  /* Aumentado o padding */
+  font-size: 16px;
+  /* Aumentado o tamanho da fonte */
+  font-weight: bold;
   cursor: pointer;
-  width: 3rem;
-  height: 3rem;
-}
-
-.q_p {
+  min-width: 50px;
+  /* Aumentado o min-width */
+  height: 65px;
+  /* Aumentado a altura */
   display: flex;
-  gap: 0.2rem;
-  justify-content: center;
-}
-
-.a_backspace {
-  display: flex;
-  gap: 0.2rem;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  border-radius: 14px;
 }
 
-.z_enter {
-  display: flex;
-  gap: 0.2rem;
-  justify-content: center;
+.tecla:hover {
+  background-color: #6d6e6f;
+  transform: scale(1.05);
+}
+
+#backspace,
+#enter {
+  min-width: 80px;
+  /* Aumentado o min-width */
+  font-size: 20px;
+  /* Aumentado o tamanho da fonte */
 }
 
 #enter {
-  width: 6.5rem;
-  margin-left: 0.5rem;
+  background-color: #6aaa64;
 }
 
-#backspace {
-  width: 4rem;
-  margin-left: 0.5rem;
+#enter:hover {
+  background-color: #5b9a55;
 }
 
-#backspace .material-symbols-outlined {
-  display: flex;
-  font-size: 2.3rem;
-  align-items: center;
-  justify-content: center;
+/* Animações */
+@keyframes flip {
+  0% {
+    transform: rotateX(0);
+  }
+
+  50% {
+    transform: rotateX(90deg);
+  }
+
+  100% {
+    transform: rotateX(0);
+  }
 }
 
-#enter .material-symbols-outlined {
-  display: flex;
-  font-size: 3rem;
-  align-items: center;
-  justify-content: center;
-  font-weight: 800;
+.jogo input.verde,
+.jogo input.amarelo,
+.jogo input.cinza {
+  animation: flip 0.6s ease;
 }
 
-
-
-
-
-
-
-
-/* Adicione isso ao seu CSS existente */
-
-/* Efeito de pressionar tecla */
-.tecla:active {
-  transform: scale(0.95) !important;
-  background-color: #3a3630 !important;
-}
-
-/* Melhora a responsividade do teclado */
+/* Responsividade */
 @media (max-width: 768px) {
   .teclado {
-    width: 95%;
-    padding: 0.5rem;
+    max-width: 95%;
+    padding: 1rem;
   }
 
   .tecla {
-    width: 2.5rem;
-    height: 2.5rem;
-    font-size: 1.5rem;
+    min-width: 40px;
+    height: 55px;
+    padding: 12px 14px;
+    font-size: 14px;
   }
 
-  #enter,
-  #backspace {
-    width: auto;
-    min-width: 3.5rem;
+  #backspace,
+  #enter {
+    min-width: 65px;
+    font-size: 18px;
+  }
+
+  .header button {
+    padding-inline: 1rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .jogo input {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
+
+  .tecla {
+    min-width: 35px;
+    height: 50px;
+    font-size: 12px;
+    padding: 10px 12px;
+  }
+
+  #backspace,
+  #enter {
+    min-width: 55px;
+    font-size: 16px;
+  }
+
+  .teclado {
+    max-width: 95%;
+    padding: 0.8rem;
+    gap: 6px;
+  }
+
+  .q_p,
+  .a_backspace,
+  .z_enter {
+    gap: 5px;
   }
 }
