@@ -139,7 +139,7 @@ body {
 
 /* Teclado */
 .teclado-container {
-  display: flex;
+  display: none;
   justify-content: center;
   width: 100%;
   padding: 20px 0;
@@ -289,4 +289,5 @@ body {
   .z_enter {
     gap: 5px;
   }
+
 }
