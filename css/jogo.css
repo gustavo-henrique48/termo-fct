@@ -146,7 +146,7 @@ body {
 }
 
 .teclado {
-  display: flex;
+  display: none;
   flex-direction: column;
   background-color: #84a59e;
   width: auto;
@@ -291,3 +291,4 @@ body {
   }
 
 }
+
