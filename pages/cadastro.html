@@ -39,15 +39,15 @@
         <img src="../images/logo.png" alt="Logo" />
       </div>
 
-      <button class="box_login" onclick="window.location.href='login.html'">
+      <button class="box_login" onclick="window.location.href='page5_perfil.html'">
         Login
       </button>
 
-      <button class="box_jogo" onclick="window.location.href='jogo.html'">
+      <button class="box_jogo" onclick="window.location.href='page4_jogo.html'">
         Jogar
       </button>
 
-      <button class="box_estatistica" onclick="window.location.href='estatistica.html'">
+      <button class="box_estatistica" onclick="window.location.href='page6_estatistica.html'">
         Estatística
       </button>
     </header>
@@ -85,7 +85,10 @@
           <option>RS</option>
         </select>
 
-        <input type="text" id="cidade" placeholder="Insira sua cidade" required>
+        <input type="text" id="cidade" list="cidades-list" placeholder="Insira sua cidade" required>
+        <datalist id="cidades-list" required>
+          <!-- As opções serão preenchidas via JavaScript -->
+        </datalist>
 
         <div class="map-box">
           <iframe width="100%" height="100%" style="border:0; border-radius:12px;" loading="lazy" allowfullscreen
@@ -100,6 +103,5 @@
 
   </div>
 </body>
-
 
 </html>
